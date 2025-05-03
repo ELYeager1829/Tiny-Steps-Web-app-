@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/DailyReportsFacade.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/ReportFacadeLocal.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/entity/DailyReports.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/entity/AppUser.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/ReportFacade.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/entity/Student.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/StudentFacade.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/entity/Teacher.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/AnnouncementFacade.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/entity/Announcement.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/AppUserFacadeLocal.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/StudentFacadeLocal.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/entity/Report.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/AnnouncementFacadeLocal.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/AppUserFacade.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/entity/Parent.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/DailyReportsFacadeLocal.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/ParentFacade.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/AbstractFacade.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/TeacherFacadeLocal.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/ParentFacadeLocal.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinyStepEJBModule/src/java/za/ac/tut/model/bl/TeacherFacade.java</file>
+        </group>
+    </open-files>
+</project-private>
