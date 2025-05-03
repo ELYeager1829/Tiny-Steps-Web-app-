@@ -91,7 +91,6 @@ public class OnboardingServlet extends HttpServlet {
                     String phone = request.getParameter("parentPhone");
                     String email = request.getParameter("parentEmail");
                     String address = request.getParameter("parentAddress");
-                   
 
                     if (fullname != null && phone != null && email != null && address != null) {
                         // Save the user first
@@ -155,9 +154,7 @@ public class OnboardingServlet extends HttpServlet {
                     request.setAttribute("error_msg", "Invalid username or password.");
                     url = "login.jsp";
                 }
-                else{
-                    url="p_dashboard.jsp";
-                }
+                
             } else {
                 request.setAttribute("error_msg", "All fields must be filled.");
                 url = "login.jsp";
@@ -182,5 +179,6 @@ public class OnboardingServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-   
+    
+
 }

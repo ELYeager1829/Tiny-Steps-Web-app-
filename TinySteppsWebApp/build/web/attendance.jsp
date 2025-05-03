@@ -1,6 +1,7 @@
 <%@page import="za.ac.tut.model.entity.Student"%>
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="za.ac.tut.models.entity.Student" %>
+<%@ page import="java.util.List" %>
+<%@ page import="model.Student" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,74 +9,88 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f7fa;
             padding: 2rem;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background-color: #f0f8ff;
         }
 
         h2 {
             color: #2c3e50;
-            margin-bottom: 1rem;
         }
 
-        label {
-            font-weight: bold;
-        }
-
-        select, input[type="submit"] {
-            padding: 0.6rem;
-            font-size: 1rem;
-            margin-top: 0.5rem;
+        table {
             width: 100%;
-            margin-bottom: 1.5rem;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: white;
         }
 
-        .back-btn {
-            display: inline-block;
-            text-decoration: none;
-            padding: 0.6rem 1rem;
-            background-color: #87CEFA;
+        th, td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        th {
+            background-color: #d1ecf1;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        input[type="submit"] {
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #3498db;
             color: white;
-            border-radius: 5px;
+            border: none;
+            cursor: pointer;
         }
 
-        .back-btn:hover {
-            background-color: #00BFFF;
+        input[type="submit"]:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
 
+<h2>Mark Attendance</h2>
+
 <%
-    Student student = (Student) request.getAttribute("student");
+    List<Student> students = (List<Student>) request.getAttribute("students");
+    if (students == null || students.isEmpty()) {
 %>
-
-<div class="container">
-    <h2>Mark Attendance for: <%= student.getFullName() %></h2>
-
-    <form action="TeachersServlet.do" method="post">
-        <!-- Hidden student ID to send back -->
-        <input type="hidden" name="markAttendance" value="<%= student.getStudentId() %>">
-
-        <label for="status">Attendance Status:</label>
-        <select name="status" id="status" required>
-            <option value="">-- Select Status --</option>
-            <option value="Present">Present</option>
-            <option value="Absent">Absent</option>
-        </select>
-
+    <p>No students found for this teacher.</p>
+<%
+    } else {
+%>
+    <form action="attendance_output.jsp" method="post">
+        <table>
+            <tr>
+                <th>Student Number</th>
+                <th>Full Name</th>
+                <th>Present</th>
+            </tr>
+            <%
+                for (int i = 0; i < students.size(); i++) {
+                    Student s = students.get(i);
+            %>
+            <tr>
+                <td><%= s.getStudentId() %></td>
+                <td><%= s.getFullName() %></td>
+                <td>
+                    <input type="checkbox" name="present" value="<%= s.getStudentId() %>">
+                </td>
+            </tr>
+            <%
+                }
+            %>
+        </table>
         <input type="submit" value="Submit Attendance">
     </form>
-
-</div>
+<%
+    }
+%>
 
 </body>
 </html>
