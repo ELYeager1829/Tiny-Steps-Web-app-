@@ -3,15 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/add_classroom.jsp</file>
             <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/t_dashboard.jsp</file>
             <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/index.html</file>
             <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/register.jsp</file>
-            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/attendance.jsp</file>
-            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/student_profile.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/manage_classroom.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/reports.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/parent_queries.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/src/java/za/ac/tut/entities/Classroom.java</file>
             <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/src/java/za/ac/tut/controller/TeachersServlet.java</file>
-            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/daily_report.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/attendance_output.jsp</file>
             <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/student_list.jsp</file>
             <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/src/java/za/ac/tut/controller/OnboardingServlet.java</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/payment_output.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/payment.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/manage_student.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/attendance.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/report.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/class_schedule.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/student_profile.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/login.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/query.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/p_dashboard.jsp</file>
+            <file>file:/C:/Users/El/OneDrive%20-%20Tshwane%20University%20of%20Technology/Documents/NetBeansProjects/TinySteppsWebApp/web/daily_report.jsp</file>
         </group>
     </open-files>
 </project-private>

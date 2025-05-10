@@ -13,12 +13,16 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
-import za.ac.tut.model.bl.DailyReportsFacadeLocal;
+import za.ac.tut.entities.Classroom;
+import za.ac.tut.model.bl.ParentFacadeLocal;
+import za.ac.tut.model.bl.ReportFacadeLocal;
 import za.ac.tut.model.bl.StudentFacadeLocal;
 import za.ac.tut.model.bl.TeacherFacadeLocal;
-import za.ac.tut.model.entity.DailyReports;
+import za.ac.tut.model.entity.Parent;
+import za.ac.tut.model.entity.Report;
 import za.ac.tut.model.entity.Student;
 import za.ac.tut.model.entity.Teacher;
 
@@ -33,7 +37,9 @@ public class TeachersServlet extends HttpServlet {
     @EJB
     private StudentFacadeLocal sfl;
     @EJB
-    private DailyReportsFacadeLocal dfl;
+    private ReportFacadeLocal dfl;
+    @EJB
+    private ParentFacadeLocal pdfl;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -42,19 +48,20 @@ public class TeachersServlet extends HttpServlet {
         String url = "t_dashboard.jsp";
 
         HttpSession session = request.getSession(false);
+        Classroom classroom = (Classroom) session.getAttribute("classroom");
         Teacher teacher = (Teacher) session.getAttribute("teacher");
         Student student = (Student) session.getAttribute("student");
 
-        List<Student> students = teacher.getStudents();
-        List<DailyReports> activities = student.getActivities();
+        List<Report> activities = student.getActivities();
 
         if (op == null || teacher == null) {
             request.setAttribute("error_msg", "Unauthorized access or missing operation.");
             url = "login.jsp";
         } else if ("viewProfile".equals(op)) {
             teacher = tfl.find(teacher.getTeacherId());
-            request.setAttribute("teacher", teacher);
-            request.setAttribute("students", students);
+            List<Student> students = classroom.getStudents();
+
+            session.setAttribute("students", students);
             url = "student_list.jsp";
         } else if ("viewStudent".equals(op)) {
             String studentId = request.getParameter("studentId");
@@ -73,7 +80,7 @@ public class TeachersServlet extends HttpServlet {
             String status = request.getParameter("status");
             Student selected = sfl.find(studentId);
             if (selected != null) {
-                request.setAttribute("selectedStudent", selected);
+                session.setAttribute("selectedStudent", selected);
                 request.setAttribute("student", selected);
                 request.setAttribute("status", status);
                 // Load past attendance records if needed
@@ -83,20 +90,24 @@ public class TeachersServlet extends HttpServlet {
                 request.setAttribute("error_msg", "Student not found.");
                 url = "t_dashboard.jsp";
             }
-           
+
         } else if ("viewParentQueries".equals(op)) {
+            List<Parent> queries = pdfl.findAll(); // or filter by teacher/classroom if needed
+            request.setAttribute("queries", queries);
             url = "parent_queries.jsp";
         } else if ("viewSchedule".equals(op)) {
             url = "class_schedule.jsp";
         } else if ("logActivity".equals(op)) {
 
             if (student != null) {
-                DailyReports activity = new DailyReports();
+                Report activity = new Report();
                 activity.setStudent(student);
-                activity.setDate(new Date());
-                activity.setMealInfo(request.getParameter("meals"));
-                activity.setNapInfo(request.getParameter("naps"));
-                activity.setHealthInfo(request.getParameter("health"));
+                activity.setReportDate(LocalDate.EPOCH);
+                activity.setMeals(request.getParameter("meals"));
+                activity.setNapTime(request.getParameter("naps"));
+                activity.setHealthNotes(request.getParameter("health"));
+                activity.setUploadedBy(teacher);
+                activity.setActivities(request.getParameter("activities"));
 
                 dfl.create(activity);
                 request.setAttribute("message", "Activity logged successfully.");

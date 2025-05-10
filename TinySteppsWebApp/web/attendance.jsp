@@ -1,6 +1,5 @@
 <%@page import="za.ac.tut.model.entity.Student"%>
 <%@ page import="java.util.List" %>
-<%@ page import="model.Student" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>

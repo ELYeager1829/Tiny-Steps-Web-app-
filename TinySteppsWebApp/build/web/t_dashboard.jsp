@@ -4,6 +4,7 @@
     Author     : Student
 --%>
 
+<%@page import="za.ac.tut.model.entity.Teacher"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -175,12 +176,12 @@
 
     <%
         String op = request.getParameter("op");
-        String name = request.getParameter("teacherFullName");
+        Teacher teacher = (Teacher)session.getAttribute("teacher");
     %>
 
     <body>
         <form action="TeachersServlet.do" method="POST">
-            <h2>Welcome ,<%=name%></h2>
+            <%--<h2>Welcome ,<%=teacher.getFullName()%></h2>--%>
             <section class="dashboard">
                 <a href="student_list.jsp">
                     <input type="hidden" name="op" value="viewProfile" />

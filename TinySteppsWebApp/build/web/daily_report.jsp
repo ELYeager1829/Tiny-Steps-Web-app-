@@ -1,6 +1,5 @@
 <%@page import="za.ac.tut.model.entity.Student"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="za.ac.tut.models.entity.Student" %>
 <!DOCTYPE html>
 <html>
 <head>

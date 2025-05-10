@@ -4,7 +4,7 @@
     Author     : El
 --%>
 
-<%@page import="za.ac.tut.model.entity.DailyReports"%>
+<%@page import="za.ac.tut.model.entity.Report"%>
 <%@page import="java.util.List"%>
 <%@page import="za.ac.tut.model.entity.Student"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -180,7 +180,7 @@
 <body>
     <%
         Student student = (Student) request.getAttribute("student");
-        List<DailyReports> activities = (List<DailyReports>) request.getAttribute("activities");
+        List<Report> activities = (List<Report>) request.getAttribute("activities");
     %>
 
     <h2>Student Profile: <%= student.getFullName()%></h2>
@@ -201,12 +201,16 @@
             </tr>
         </thead>
         <tbody>
-            <% for (DailyReports activity : activities) { %>
+            <% for (Report activity : activities) { %>
                 <tr>
-                    <td><%= activity.getDate() %></td>
-                    <td><%= activity.getMealInfo() %></td>
-                    <td><%= activity.getNapInfo() %></td>
-                    <td><%= activity.getHealthInfo() %></td>
+                    <td><%= activity.getStudent() %></td>
+                    <td><%= activity.getReportId() %></td>
+                    <td><%= activity.getReportDate() %></td>
+                    <td><%= activity.getMeals() %></td>
+                    <td><%= activity.getNapTime() %></td>
+                    <td><%= activity.getHealthNotes() %></td>
+                    <td><%= activity.getUploadedBy() %></td>
+                    
                 </tr>
             <% } %>
         </tbody>

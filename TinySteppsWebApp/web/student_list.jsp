@@ -179,16 +179,17 @@
 <body>
     <h1>Click below to view a list of all students:</h1>
     <%
-        List<Student> students = (List<Student>) request.getAttribute("students");
+        List<Student> students = (List<Student>) session.getAttribute("students");
 
     %>
-    <form action="TeachersServlet.do" method="POST">
+   
         <table border="1">
             <th>Student Number</th>
             <th>Full Name</th>
             <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Parent</th>
             <th>Class</th>
-            <th>Actions</th>
 
             <%  for (int i = 0; i < students.size(); i++) {
                     Student student = students.get(i);
@@ -200,6 +201,13 @@
                 <td><%= student.getGender()%></td>
                 <td><%= student.getParent()%></td>
                 <td><%= student.getClassGroup()%></td>
+                <td>
+                     <form action="TeachersServlet.do" method="post">
+                        <input type="hidden" name="op" value="viewStudent"/>
+                        <input type="hidden" name="studentId" value="<%= student.getStudentId() %>"/>
+                        <input type="submit" value="View Profile"/>
+                    </form>
+                </td>
                 
             </tr>
             <%
@@ -215,6 +223,6 @@
 
         </table>
 
-    </form> 
+   
 </body>
 </html>
