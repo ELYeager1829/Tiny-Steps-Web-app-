@@ -45,13 +45,13 @@ public class Student implements Serializable {
     private String classGroup;
     
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)     
-    private List<DailyReports> activities;
+    private List<Report> activities;
 
-    public List<DailyReports> getActivities() {
+    public List<Report> getActivities() {
         return activities;
     }
 
-    public void setActivities(List<DailyReports> activities) {
+    public void setActivities(List<Report> activities) {
         this.activities = activities;
     }
     

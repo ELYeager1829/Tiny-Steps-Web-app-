@@ -5,10 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MapsId;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 public class Teacher implements Serializable {
@@ -31,21 +29,8 @@ public class Teacher implements Serializable {
 
     @Column(length = 100)
     private String email;
-    
-    @OneToMany(mappedBy = "teacher")
-    private List<Student> students;
 
     // Getters and Setters
-
-    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
-    }
-    
-    
 
     public Integer getTeacherId() {
         return teacherId;
