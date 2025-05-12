@@ -204,9 +204,7 @@ public class OnboardingServlet extends HttpServlet {
                     request.setAttribute("error_msg", "Invalid username or password.");
                     url = "login.jsp";
                 }
-                else{
-                    url="p_dashboard.jsp";
-                }
+                
             } else {
                 request.setAttribute("error_msg", "All fields must be filled.");
                 url = "login.jsp";
